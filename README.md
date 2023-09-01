@@ -1,6 +1,6 @@
 # Zod Sandbox Readme
 
-Welcome to the Zod Sandbox repository! This project is built using TypeScript, Vite, React, Tailwind CSS, CodeMirror, Flowbite, and Zod. It provides a playground environment for experimenting with Zod, a runtime type checking library for TypeScript.
+Welcome to the [Zod Sandbox](https://zod-sandbox.vercel.app/) repository! This project is built using TypeScript, Vite, React, Tailwind CSS, CodeMirror, Flowbite, and Zod. It provides a playground environment for experimenting with Zod, a runtime type checking library for TypeScript.
 
 ## Table of Contents
 
