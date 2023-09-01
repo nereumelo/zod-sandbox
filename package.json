@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/autocomplete": "^6.9.0",
     "@codemirror/lang-javascript": "^6.2.1",
     "@codemirror/view": "^6.17.1",
     "@uiw/react-codemirror": "^4.21.12",

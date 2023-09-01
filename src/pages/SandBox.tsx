@@ -23,7 +23,7 @@ export default function SandBox() {
               label="Data To Validate:"
               value={data}
               onChange={handleData}
-              focused
+              type="data"
               placeholder="Insert data to validate here"
               onKeyPress={handleAction}
             />
@@ -31,6 +31,7 @@ export default function SandBox() {
               className="col-start-1 row-start-2"
               label="Schema:"
               value={schema}
+              type="schema"
               onChange={handleSchema}
               placeholder="Insert your zod schema here"
               onKeyPress={handleAction}
@@ -38,9 +39,9 @@ export default function SandBox() {
             <Btn onClick={handleAction} className="col-start-1 row-start-3 z-10">Validate</Btn>
             <Box
               className="row-span-3 col-start-2 row-start-1"
-              disabled
               label="Result:"
               value={result}
+              type="result"
             />
         </div>
       </div>
