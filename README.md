@@ -46,7 +46,7 @@ Follow these steps to get the Zod Sandbox up and running on your local machine:
    ```
 5. **Open your browser:**
 
-   The development server should now be running. Open your web browser and navigate to `http://localhost:3000` to access the Zod Sandbox.
+   The development server should now be running. Open your web browser and navigate to `http://localhost:5173` to access the Zod Sandbox.
 
 ## Usage
 
