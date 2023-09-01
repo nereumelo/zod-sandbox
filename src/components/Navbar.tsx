@@ -20,16 +20,16 @@ export default function Navbar() {
           {/* <FBNavbar.Link active href="#">
             Home
           </FBNavbar.Link> */}
-          <FBNavbar.Link href="https://zod.dev/" target='_blank'>
+          <FBNavbar.Link href="https://zod.dev/" target='_blank' rel="noreferrer">
             Zod Docs
           </FBNavbar.Link>
-          {/* <FBNavbar.Link href="https://www.npmjs.com/package/zod-error" target='_blank'>
+          {/* <FBNavbar.Link href="https://www.npmjs.com/package/zod-error" target='_blank' rel="noreferrer">
             ZodError
           </FBNavbar.Link>
-          <FBNavbar.Link href="https://www.npmjs.com/package/highlight.js" target='_blank'>
+          <FBNavbar.Link href="https://www.npmjs.com/package/highlight.js" target='_blank rel="noreferrer">
             Highlight.js
           </FBNavbar.Link> */}
-          {/* <FBNavbar.Link href="https://github.com/nereumelo" target='_blank'>
+          {/* <FBNavbar.Link href="https://github.com/nereumelo" target='_blank' rel="noreferrer">
             Contact
           </FBNavbar.Link> */}
         </FBNavbar.Collapse>
