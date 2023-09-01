@@ -1,4 +1,5 @@
 import { Navbar as FBNavbar } from 'flowbite-react';
+import { GrValidate } from 'react-icons/gr';
 
 export default function Navbar() {
   return (
@@ -9,11 +10,7 @@ export default function Navbar() {
     >
       <div className='w-full flex items-center justify-between sm:pl-4 pl-2 sm:pr-12 pr-2'>
         <FBNavbar.Brand>
-          <img
-            alt="Validate engine"
-            className="mr-3 h-6 sm:h-9"
-            src="https://static-00.iconduck.com/assets.00/validate-icon-512x512-7pkrx69v.png"
-          />
+          <GrValidate className="text-4xl mx-2 my-0" />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Zod Sanbox
           </span>
