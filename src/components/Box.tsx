@@ -3,7 +3,8 @@ import { javascript, javascriptLanguage } from '@codemirror/lang-javascript';
 import { EditorView } from "@codemirror/view";
 import { Completion, CompletionContext, CompletionResult } from "@codemirror/autocomplete"
 import Header from './Header';
-import { KeyboardEvent } from 'react';
+import { KeyboardEvent, useContext } from 'react';
+import { MainContext } from '../contexts/Main';
 
 const zodCompletionOptions: Completion[] = [
   {
@@ -122,8 +123,10 @@ const zodCompletionOptions: Completion[] = [
 
 export default function Box(props: BoxProps) {
   const { className, label, onChange, onKeyPress, placeholder, style, type, value } = props
+  const { theme } = useContext(MainContext);
   const disabled = type === 'result';
   const focused = type === 'data';
+  const activeTheme = theme === 'dark' ? 'dark' : 'light';
 
   const handleValue = (value: string) => {
     onChange?.(value);
@@ -172,6 +175,7 @@ export default function Box(props: BoxProps) {
             lineNumbers: false,
           }}
           onKeyDownCapture={handleKeyPress}
+          theme={activeTheme}
         />
     </div>
   )

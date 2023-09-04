@@ -6,7 +6,7 @@ import Box from "../components/Box";
 
 export function ValidatePage() {
   const { data, result, schema } = useContext(MainContext);
-  const { handleData, handleResult, handleSchema } =useContext(MainDispatchContext);
+  const { handleData, handleResult, handleSchema } = useContext(MainDispatchContext);
 
   const handleAction = () => {
     validate(

@@ -61,7 +61,6 @@ const validate = (rawData: string, rawSchema: string, present: (data: string) =>
 
   if (!result.success) {
     const errors = result.error.issues.sort((a, b) => a.path.length - b.path.length)
-    console.log(result)
     const errorMessages = generateErrorMessage(errors, options)
     present(errorMessages)
     return
