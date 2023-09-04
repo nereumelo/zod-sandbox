@@ -9,7 +9,7 @@ export default function Footer() {
           // href="https://nereu.dev"
           target="_blank"
           rel="noreferrer"
-          className='justify-self-start'
+          className='justify-self-start select-none'
         >
           <FBFooter.Copyright
             by="Nereu Melo"

@@ -17,7 +17,7 @@ export default function Navbar() {
       className='shadow-md'
     >
       <div className='w-full grid grid-cols-3 justify-items-center lg:px-10 px-3'>
-        <FBNavbar.Brand className='col-start-2' as='div'>
+        <FBNavbar.Brand className='col-start-2 select-none' as='div'>
           <Link to='/' className='flex'>
             <GrValidate className="text-4xl mx-2 my-0 dark:invert" />
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
