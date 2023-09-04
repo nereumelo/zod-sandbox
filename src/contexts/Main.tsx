@@ -3,10 +3,12 @@ import { getTheme } from "../themes/handler";
 
 export const MainContext = createContext<Partial<MainContextProps>>({})
 export const MainDispatchContext = createContext<Partial<MainDispatchContextProps>>({})
+const defaultData = "{\n  shape: 'square',\n  side: 12,\n  colors: ['black', 'blue', 'white'],\n}";
+const defaultSchema = "z.object({\n  shape: z.string(),\n  side: z.number(),\n  colors: z.array(z.enum(['black', 'blue', 'white']))\n}).strict()";
 
 function MainContextProvider({ children }: React.PropsWithChildren) {
-  const [data, setData] = useState(localStorage.getItem('data') || '')
-  const [schema, setSchema] = useState(localStorage.getItem('schema') || '')
+  const [data, setData] = useState(localStorage.getItem('data') || defaultData)
+  const [schema, setSchema] = useState(localStorage.getItem('schema') || defaultSchema)
   const [theme , setTheme] = useState(localStorage.getItem('theme') || getTheme())
   const [result, setResult] = useState('')
   
