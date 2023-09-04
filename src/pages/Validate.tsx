@@ -17,8 +17,8 @@ export function ValidatePage() {
   };
 
   return (
-    <div className="h-[76.8vh] w-full flex items-stretch justify-center">
-      <div className="h-full w-[76%] grid grid-cols-2 grid-rows-[29.5vh_29.5vh_41.6px] gap-6">
+    <div className="h-full w-full flex items-stretch justify-center">
+      <div className="h-full w-[70%] grid grid-cols-2 grid-rows-[auto_auto_41.6px] gap-6">
         <Box
           label="Data To Validate:"
           value={data}

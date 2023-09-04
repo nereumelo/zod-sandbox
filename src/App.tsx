@@ -10,7 +10,7 @@ export default function App() {
   return (
     <MainContextProvider>
       <Flowbite theme={setTheme()}>
-      <div className="h-full w-full absolute">
+      <div className="h-screen w-screen grid grid-rows-[60px_auto_60px] gap-12">
         <Navbar />
         <Outlet context={Router} />
         <Footer />
