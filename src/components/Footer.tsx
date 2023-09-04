@@ -5,7 +5,12 @@ export default function Footer() {
   return (
     <FBFooter container>
       <div className='w-full grid grid-cols-3 justify-items-center lg:px-10 px-3'>
-        <a href="https://nereu.dev" target="_blank" rel="noreferrer" className='justify-self-start'>
+        <a
+          // href="https://nereu.dev"
+          target="_blank"
+          rel="noreferrer"
+          className='justify-self-start'
+        >
           <FBFooter.Copyright
             by="Nereu Melo"
             year={2023}
@@ -15,7 +20,7 @@ export default function Footer() {
           <FBFooter.Link href="https://zod.dev/" target='_blank' rel="noreferrer">
             Zod Docs
           </FBFooter.Link>
-          <FBFooter.Link href="https://www.gnu.org/licenses/gpl-3.0.html" target='_blank' rel="noreferrer">
+          <FBFooter.Link href="https://github.com/nereumelo/zod-sandbox/blob/main/LICENSE" target='_blank' rel="noreferrer">
             Licensing
           </FBFooter.Link>
           <FBFooter.Link href="https://www.linkedin.com/in/nereumelo/" target='_blank' rel="noreferrer">
