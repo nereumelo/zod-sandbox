@@ -1,5 +1,5 @@
 import { Footer as FBFooter } from 'flowbite-react';
-import { BsGithub } from 'react-icons/bs';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 export default function Footer() {
   return (
@@ -21,18 +21,21 @@ export default function Footer() {
             Zod Docs
           </FBFooter.Link>
           <FBFooter.Link href="https://github.com/nereumelo/zod-sandbox/blob/main/LICENSE" target='_blank' rel="noreferrer">
-            Licensing
-          </FBFooter.Link>
-          <FBFooter.Link href="https://www.linkedin.com/in/nereumelo/" target='_blank' rel="noreferrer">
-            Contact
+            License
           </FBFooter.Link>
         </FBFooter.LinkGroup>
-        <div className='justify-self-end'>
+        <div className='flex gap-4 justify-self-end'>
           <FBFooter.Icon
             href="https://github.com/nereumelo/zod-sandbox"
             target='_blank'
             rel="noreferrer"
             icon={BsGithub}
+          />
+          <FBFooter.Icon
+            href="https://www.linkedin.com/in/nereumelo"
+            target='_blank'
+            rel="noreferrer"
+            icon={BsLinkedin}
           />
         </div>
       </div>
