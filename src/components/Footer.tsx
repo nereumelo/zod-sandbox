@@ -16,7 +16,7 @@ export default function Footer() {
             year={2023}
           />
         </a>
-        <FBFooter.LinkGroup>
+        <FBFooter.LinkGroup className='lg:gap-0 gap-4'>
           <FBFooter.Link href="https://zod.dev/" target='_blank' rel="noreferrer">
             Zod Docs
           </FBFooter.Link>

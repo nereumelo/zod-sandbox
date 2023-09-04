@@ -171,6 +171,8 @@ export default function Box(props: BoxProps) {
           readOnly={disabled}
           autoFocus={focused}
           height='100%'
+          minHeight='50px'
+          minWidth='300px'
           basicSetup={{
             lineNumbers: false,
           }}

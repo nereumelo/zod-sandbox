@@ -18,7 +18,7 @@ export function ValidatePage() {
 
   return (
     <div className="h-full w-full flex items-stretch justify-center">
-      <div className="h-full w-[70%] grid grid-cols-2 grid-rows-[auto_auto_41.6px] gap-6">
+      <div className="h-full w-[94%] xl:w-[70%] grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto_41.6px] gap-6">
         <Box
           label="Data To Validate:"
           value={data}
@@ -36,11 +36,11 @@ export function ValidatePage() {
           placeholder="Insert your zod schema here"
           onKeyPress={handleAction}
         />
-        <Btn onClick={handleAction} className="col-start-1 row-start-3 z-10">
+        <Btn onClick={handleAction} className="col-start-1 row-start-3">
           Validate
         </Btn>
         <Box
-          className="row-span-3 col-start-2 row-start-1"
+          className="row-span-3"
           label="Result:"
           value={result}
           type="result"
