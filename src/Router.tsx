@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Error, Validate } from "./pages";
 import App from "./App";
+import ValidateContextProvider from "./contexts/Validate";
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Validate />,
+        element: <ValidateContextProvider children={<Validate/>}/>,
       },
       {
         path: "*",

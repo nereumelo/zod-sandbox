@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { MainContext, MainDispatchContext } from "../contexts/Main";
+import { ValidateContext, ValidateDispatchContext } from "../contexts/Validate";
 import Btn from "../components/Button";
 import validate from "../services/validate";
 import Box from "../components/Box";
 
 export function ValidatePage() {
-  const { data, result, schema } = useContext(MainContext);
-  const { handleData, handleResult, handleSchema } = useContext(MainDispatchContext);
+  const { data, result, schema } = useContext(ValidateContext);
+  const { handleData, handleResult, handleSchema } = useContext(ValidateDispatchContext);
 
   const handleAction = () => {
     validate(

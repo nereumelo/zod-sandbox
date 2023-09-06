@@ -3,24 +3,9 @@ import { getTheme } from "../themes/handler";
 
 export const MainContext = createContext<Partial<MainContextProps>>({})
 export const MainDispatchContext = createContext<Partial<MainDispatchContextProps>>({})
-const defaultData = "{\n  shape: 'square',\n  side: 12,\n  colors: ['black', 'blue', 'white'],\n}";
-const defaultSchema = "z.object({\n  shape: z.string(),\n  side: z.number(),\n  colors: z.array(z.enum(['black', 'blue', 'white']))\n}).strict()";
 
 function MainContextProvider({ children }: React.PropsWithChildren) {
-  const [data, setData] = useState(localStorage.getItem('data') || defaultData)
-  const [schema, setSchema] = useState(localStorage.getItem('schema') || defaultSchema)
   const [theme , setTheme] = useState(localStorage.getItem('theme') || getTheme())
-  const [result, setResult] = useState('')
-  
-  const handleData = (data: string) => {
-    setData(data)
-    localStorage.setItem('data', data);
-  }
-
-  const handleSchema = (schema: string) => {
-    setSchema(schema)
-    localStorage.setItem('schema', schema);
-  }
   
   const handleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark' 
@@ -28,13 +13,9 @@ function MainContextProvider({ children }: React.PropsWithChildren) {
     localStorage.setItem('theme', newTheme);
   }
 
-  const handleResult = (result: string) => {
-    setResult(result)
-  }
-
   return (
-    <MainContext.Provider value={{ data, schema, result, theme }}>
-      <MainDispatchContext.Provider value={{ handleData, handleSchema, handleResult, handleTheme }}>
+    <MainContext.Provider value={{ theme }}>
+      <MainDispatchContext.Provider value={{ handleTheme }}>
         {children}
       </MainDispatchContext.Provider>
     </MainContext.Provider>
@@ -42,17 +23,11 @@ function MainContextProvider({ children }: React.PropsWithChildren) {
 }
 
 type MainContextProps = {
-  data: string
-  schema: string
   theme: string
-  result: string
 }
 
 type MainDispatchContextProps = {
-  handleData: (data: string) => void
-  handleSchema: (schema: string) => void
   handleTheme: () => void
-  handleResult: (result: string) => void
 }
 
 export default MainContextProvider
