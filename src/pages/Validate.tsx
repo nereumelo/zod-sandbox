@@ -3,8 +3,10 @@ import { ValidateContext, ValidateDispatchContext } from "../contexts/Validate";
 import Btn from "../components/Button";
 import validate from "../services/validate";
 import Box from "../components/Box";
+import { MainDispatchContext, Notification } from "../contexts/Main";
 
 export function ValidatePage() {
+  const { addNotification } = useContext(MainDispatchContext);
   const { data, result, schema } = useContext(ValidateContext);
   const { handleData, handleResult, handleSchema } = useContext(ValidateDispatchContext);
 
@@ -12,7 +14,8 @@ export function ValidatePage() {
     validate(
       data as string,
       schema as string,
-      handleResult as (result: string) => void
+      handleResult as (result: string) => void,
+      addNotification as (notification: Notification) => void
     );
   };
 
@@ -36,7 +39,7 @@ export function ValidatePage() {
           placeholder="Insert your zod schema here"
           onKeyPress={handleAction}
         />
-        <Btn onClick={handleAction} className="col-start-1 row-start-3">
+        <Btn onClick={handleAction} className="z-0 col-start-1 row-start-3">
           Validate
         </Btn>
         <Box
