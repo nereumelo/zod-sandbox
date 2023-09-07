@@ -16,11 +16,11 @@ export default function Navbar() {
       fluid
       className='shadow-md'
     >
-      <div className='w-full grid grid-cols-3 justify-items-center lg:px-10 px-3'>
-        <FBNavbar.Brand className='col-start-2 select-none' as='div'>
+      <div className='w-full grid sm:grid-cols-3 grid-cols-2 justify-items-center lg:px-10 px-3'>
+        <FBNavbar.Brand className='sm:col-start-2 col-start-1 sm:justify-self-center justify-self-start select-none' as='div'>
           <Link to='/' className='flex'>
             <GrValidate className="text-4xl mx-2 my-0 dark:invert" />
-            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+            <span className="whitespace-nowrap self-center text-xl font-semibold dark:text-white">
               Zod Sandbox
             </span>
           </Link>
