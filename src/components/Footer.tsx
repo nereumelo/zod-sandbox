@@ -3,20 +3,20 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 export default function Footer() {
   return (
-    <FBFooter container>
-      <div className='w-full grid grid-cols-3 justify-items-center lg:px-10 px-3'>
+    <FBFooter className='sm:py-6 sm:px-14 py-4 px-6'>
+      <div className='h-full w-full grid sm:grid-cols-3 sm:grid-rows-1 grid-cols-2 grid-rows-2 justify-items-center gap-y-5'>
         <a
           // href="https://nereu.dev"
           target="_blank"
           rel="noreferrer"
-          className='justify-self-start select-none'
+          className='sm:justify-self-start justify-self-center select-none sm:row-start-1 row-start-2 sm:col-span-1 col-span-2'
         >
           <FBFooter.Copyright
             by="Nereu Melo"
             year={2023}
           />
         </a>
-        <FBFooter.LinkGroup className='lg:gap-0 gap-4'>
+        <FBFooter.LinkGroup className='lg:gap-0 gap-4 row-start-1 sm:col-start-2 sm:justify-self-center justify-self-start'>
           <FBFooter.Link href="https://zod.dev/" target='_blank' rel="noreferrer">
             Zod Docs
           </FBFooter.Link>
@@ -24,7 +24,7 @@ export default function Footer() {
             License
           </FBFooter.Link>
         </FBFooter.LinkGroup>
-        <div className='flex gap-4 justify-self-end'>
+        <div className='flex gap-4 justify-self-end row-start-1 sm:col-start-3'>
           <FBFooter.Icon
             href="https://github.com/nereumelo/zod-sandbox"
             target='_blank'
