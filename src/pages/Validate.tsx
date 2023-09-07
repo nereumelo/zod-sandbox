@@ -21,7 +21,7 @@ export function ValidatePage() {
 
   return (
     <div className="h-full w-full flex items-stretch justify-center">
-      <div className="h-full w-[94%] xl:w-[70%] grid grid-cols-1 md:grid-cols-2 grid-rows-[28vh_28vh_41.6px] gap-6">
+      <div className="h-full w-[94%] xl:w-[70%] grid grid-cols-1 md:grid-cols-2 grid-rows-[1fr_1fr_41.6px_1fr] md:grid-rows-[28vh_28vh_41.6px] gap-6">
         <Box
           label="Data To Validate:"
           value={data}
@@ -43,7 +43,7 @@ export function ValidatePage() {
           Validate
         </Btn>
         <Box
-          className="row-span-3"
+          className="md:row-span-3"
           label="Result:"
           value={result}
           type="result"
