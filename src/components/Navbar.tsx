@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link to='/' className='flex'>
             <GrValidate className="text-4xl mx-2 my-0 dark:invert" />
             <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-              Zod Sanbox
+              Zod Sandbox
             </span>
           </Link>
         </FBNavbar.Brand>
