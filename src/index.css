@@ -4,23 +4,11 @@
 
 * {
   box-sizing: border-box;
-  scrollbar-width: thin;
+  scrollbar-width: 0;
 }
 
 *::-webkit-scrollbar {
-  width: 11px;
-  height: 11px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #ffffff;
-  border-radius: 5px;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #727272;
-  border-radius: 14px;
-  border: 2px solid #ffffff;
+  width: 0;
 }
 
 body,html {
